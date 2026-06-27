@@ -1,0 +1,62 @@
+title = "Leonardo Benicio — Apps"
+theme = "github.com/lbenicio/aboutme-v2-theme"
+baseURL = "/"
+version = "2.0.2"
+locale = "en-us"
+resourceDir = "resources"
+
+[pagination]
+pagerSize = 24
+path = "page"
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+style = "github-dark"
+guessSyntax = true
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS", "JSON"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
+
+[sitemap]
+changefreq = "daily"
+priority = 0.5
+filename = "sitemap.xml"
+
+[permalinks]
+post = "/post/:year/:month/:day/:slug/"
+
+[params]
+author = "Leonardo Benicio"
+description = "macOS apps crafted for performance and simplicity"
+showReadingTime = true
+
+# Social handlers
+githubHandler = "lbenicio"
+linkedinHandler = "leonardo-benicio"
+twitterHandler = "lbenicio_"
+
+# Site (overridden by CI via /tmp/hugo-dynamic.toml)
+siteUrl = "https://apps.lbenicio.dev/"
+appMode = "SINGLE"
+singleContent = "content/single/apps.md"
+
+# Fork me ribbon
+enableForkMe = false
+
+# Umami analytics
+umamiWebsiteId = "c3cde340-7e81-480f-a38a-dc20a57081fa"
+umamiScriptUrl = "https://analytics.4686189.xyz/script.js"
+
+# Legal links
+privacyUrl = "https://legal.lbenicio.dev/docs/privacy-policy"
+termsUrl = "https://legal.lbenicio.dev/docs/terms-of-service"

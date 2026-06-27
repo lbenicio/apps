@@ -1,0 +1,10 @@
+# hugo
+public/
+.hugo_build.lock
+resources/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode
