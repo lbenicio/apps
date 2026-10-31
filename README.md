@@ -1,6 +1,6 @@
 # Leonardo Benicio — Apps
 
-**Current version:** `2.0.8`
+**Current version:** `2.0.9`
 
 A catalog of macOS applications, built with Hugo and the [AboutMe v2 theme](https://github.com/lbenicio/aboutme-v2-theme).
 
