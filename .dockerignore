@@ -4,7 +4,7 @@ FROM alpine:latest AS build
 # Install Hugo Extended and Go
 RUN apk add --update --no-cache hugo go git
 
-# Allow Go to download required toolchain version (go.mod requires >=1.26.4, Alpine ships 1.26.3)
+# Allow Go to download required toolchain version (go.mod requires Go 1.27.0 or newer)
 ENV GOTOOLCHAIN=auto
 
 RUN hugo version && go version
@@ -17,7 +17,7 @@ COPY . .
 RUN hugo mod get
 
 RUN hugo --minify --environment production --cleanDestinationDir
-RUN go run github.com/lbenicio/theme/cmd/obfuscate@latest ./public || true
+RUN go run github.com/lbenicio/theme/cmd/obfuscate@v0.0.0-20261108201809-10c20d4001e1 ./public || true
 
 # Stage 2 — serve
 FROM nginx:alpine
