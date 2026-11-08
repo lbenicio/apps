@@ -17,7 +17,7 @@ COPY . .
 RUN hugo mod get
 
 RUN hugo --minify --environment production --cleanDestinationDir
-RUN go run github.com/lbenicio/aboutme-v2-theme/cmd/obfuscate@latest ./public || true
+RUN go run github.com/lbenicio/theme/cmd/obfuscate@latest ./public || true
 
 # Stage 2 — serve
 FROM nginx:alpine
