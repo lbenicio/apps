@@ -60,10 +60,12 @@ singleContent = "content/single/apps.md"
 # Fork me ribbon
 enableForkMe = false
 
-# Umami analytics
-umamiWebsiteId = "c3cde340-7e81-480f-a38a-dc20a57081fa"
-umamiScriptUrl = "https://analytics.4686189.xyz/script.js"
-
 # Legal links
 privacyUrl = "https://legal.lbenicio.dev/docs/privacy-policy"
 termsUrl = "https://legal.lbenicio.dev/docs/terms-of-service"
+
+[services.googleAnalytics]
+id = "G-MMET7DHDSP"
+
+[privacy.googleAnalytics]
+respectDoNotTrack = true
