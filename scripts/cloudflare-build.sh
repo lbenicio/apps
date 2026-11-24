@@ -8,6 +8,15 @@ set -euo pipefail
 
 : "${SITE_URL:?Set SITE_URL in Cloudflare Build variables}"
 
+expected_hugo_version="0.170.1"
+actual_hugo_version="$(hugo version | awk '{print $2}' | sed -E 's/^v//; s/[-+].*$//')"
+if [ "$actual_hugo_version" != "$expected_hugo_version" ]; then
+    printf 'Hugo version mismatch: expected %s; Cloudflare Workers Builds must set HUGO_VERSION=%s (found %s).\n' \
+        "$expected_hugo_version" "$expected_hugo_version" "${actual_hugo_version:-unknown}" >&2
+    exit 1
+fi
+echo "Using Hugo $actual_hugo_version"
+
 work_dir="$(mktemp -d)"
 trap 'rm -rf "$work_dir"' EXIT
 
