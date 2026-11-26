@@ -46,6 +46,7 @@ post = "/post/:year/:month/:day/:slug/"
 author = "Leonardo Benicio"
 description = "macOS apps crafted for performance and simplicity"
 showReadingTime = true
+googleAdsTagId = "AW-18594527327"
 
 # Social handlers
 githubHandler = "lbenicio"
